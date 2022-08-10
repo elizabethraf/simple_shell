@@ -1,3 +1,5 @@
+#ifndef _MAIN_H_
+#define _MAIN_H_
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -14,9 +16,8 @@
 #define MAX_PATH 1024
 #define COMMAND_LEN 1024
 
-void simple_shell();
-void type_prompt();
-void clear();
-void read_command(int* cm[], char *par[]);
-size_t num_read;
-char *strcpy (char *__restrict __dest, const char *__restrict __src);
+char *read_line();
+char **split_line(char *line);
+void shell_exec(char **args);
+
+#endif
