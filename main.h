@@ -19,5 +19,6 @@
 char *read_line();
 char **split_line(char *line);
 void shell_exec(char **args);
-
+void shell_cd(char **args);
+void shell_exit(char **args);
 #endif
