@@ -5,8 +5,7 @@
 *
 * Return: 0 always
 **/
-
-int main(void)
+int main(int ac, char **av)
 {
 	char *linebuf = NULL;
 	char **strpart = NULL;
