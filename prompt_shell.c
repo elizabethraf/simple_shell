@@ -10,6 +10,20 @@ char *read_line()
 	char *linebuf = NULL;
 	size_t bufferlen = 0;
 
-	getline(&linebuf, &bufferlen, stdin);
+	if (getline(&linebuf, &bufferlen, stdin) == -1)
+	{
+		if (feof(stdin))
+		{
+			printf("\n");
+			exit(EXIT_SUCCESS);
+		}
+		else
+		{
+			perror("readline");
+			exit(EXIT_FAILURE);
+		}
+	}
+
 	return (linebuf);
 }
+

@@ -10,7 +10,7 @@ int main(void)
 	char *linebuf = NULL;
 	char **strpart = NULL;
 
-	while (true)
+	while (1)
 	{
 		printf("$ ");
 		linebuf = read_line();
@@ -23,5 +23,8 @@ int main(void)
 
 		free(strpart);
 		free(linebuf);
+
 	}
+
+	return (0);
 }
